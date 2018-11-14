@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="testVo" class="com.study.example.vo.TestVo" />
+	
+	<bean id="sample04" class="com.study.example.study04.Sample04Object">
+		<property name="id" value="property" />
+		<property name="num" value="100" />
+		<property name="vo" ref="testVo" />
+		<!-- <property name="vo">
+			<ref bean="testVo"/>
+		</property> -->
+	</bean>
+	
+	<bean id="sample05" class="com.study.example.study05.Sample05" c:id="constructor" p:num="100">
+		<property name="vo" ref="testVo" />
+	</bean>
+</beans>

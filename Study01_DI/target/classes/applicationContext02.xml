@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sample02_p" class="com.study.example.study02.Sample02">
+		<property name="id" value="properties" />
+		<property name="num" value="50" />
+		
+		<!-- 
+		<property name="id">
+			<value>properties</value>
+		</property>	
+		<property name="num">
+			<value>50</value>
+		</property> 
+		-->
+	</bean>
+	
+	<bean id="sample02_c" class="com.study.example.study02.Sample02">
+		<constructor-arg index="0" value="constructor"/>
+		<constructor-arg index="1" value="100"/>
+		
+		<!-- 
+		<constructor-arg index="0">
+			<value>constructor</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>100</value>
+		</constructor-arg> 
+		-->
+	</bean>
+</beans>
